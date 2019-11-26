@@ -1,0 +1,39 @@
+{% extends 'base.html'%}
+{% load static %}
+{% load staticfiles%}
+
+{% block content %}
+<!-- <div class="container">
+  <div class="row">
+  		 <img src="{% static "images/brur1.jpg" %}" class="img-fluid" alt="Responsive image"> 
+  </div>
+
+  <div class="row">
+  		 <img src="{% static "images/brur1.jpg" %}" class="img-fluid" alt="Responsive image"> 
+  </div>
+
+  <div class="row">
+  		 <img src="{% static "images/brur2.jpg" %}" class="img-fluid" alt="Responsive image"> 
+  </div>
+
+</div> -->
+
+<div class="container">
+  <h3>student</h3>
+  <ul>
+    {% for student in students %}
+    <li>
+      
+      {{student.student_name}}
+      {{student.reg_no}}
+      <!-- {{student.photo}} -->
+      <img src="{{ student.photo.url }}">
+      
+    </li>
+    {% endfor %}
+  </ul>
+  
+</div>
+ 
+
+{%endblock content%}

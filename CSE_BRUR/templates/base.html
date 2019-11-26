@@ -1,0 +1,198 @@
+{% load static %}
+{% load staticfiles%}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>CSE BRUR</title>
+
+     <link href="{% static 'main.css' %}" rel="stylesheet">
+     <link href="{% static 'temp.css' %}" rel="stylesheet">
+     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+     <link href="{% static 'css/bootstrap-theme.min.css' %}" rel="stylesheet">
+     <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+     <link href="{% static 'css/animate.min.css' %}" rel="stylesheet">
+     <link href="{% static 'css/bootstrap-grid.css' %}" rel="stylesheet">
+     <link href="{% static 'css/bootstrap-grid.min.css' %}" rel="stylesheet">
+     <link href="{% static 'css/bootstrap-reboot.min.css' %}" rel="stylesheet">
+     <link href="{% static 'css/bootstrap-reboot.css' %}" rel="stylesheet">
+     <!-- <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet"> -->
+     <link href="{% static 'css/main.css' %}" rel="stylesheet">
+     <link href="{% static 'slider.css' %}" rel="stylesheet">
+
+
+
+
+    <script href="{% static 'main.js' %}" rel="stylesheet"></script>
+    <script href="{% static 'js/bootstrap.min.js' %}" rel="stylesheet"></script>
+    <script href="{% static 'js/jquery.min.js' %}" rel="stylesheet"></script>
+    <script href="{% static 'js/bootstrap.bundle.js' %}" rel="stylesheet"></script>
+    <script href="{% static 'js/bootstrap.bundle.min.js' %}" rel="stylesheet"></script>
+    <script href="{% static 'js/bootstrap.js' %}" rel="stylesheet"></script>
+    <script href="{% static 'js/ie10-viewport-bug-workaround.js' %}" rel="stylesheet"></script>
+    {% block js %}{% endblock %}
+
+</head>
+
+  <body>
+
+      <div class="navbar navbar-default navbar-fixed-top ">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{%url 'index'%}">CSE BRUR</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <!-- <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li> -->
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class=""><a href="{%url 'log_in'%}">Log In <span class="sr-only">(current)</span></a></li>
+              <li class=""><a href="{%url 'sign_in'%}">Sign Up </a></li>
+              <li>
+
+                <form class="navbar-form" role="search">
+                    <div class="input-group add-on">
+                      <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i>
+                              </button>
+                        </div>
+                    </div>
+                </form>
+              </li>
+
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+
+
+
+     <div class="navbar navbar-default navbar-static-top navPadding" > 
+                
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+              </button>
+          </div>
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+
+                      <li ><a class="week" href="{% url 'study'%}">ACADEMIC</a></li>
+                      <li><a href="{% url 'seminer'%}">SEMINER</a></li>
+                      <li><a href="{% url 'co_curricular'%}">CO-CURRICULAR </a></li>
+                      <li><a href="{% url 'carrier'%}">CARRIER</a></li>
+                      <li><a class="week" href="{% url 'social_work'%}">SOCIAL WORK </a></li>
+
+                  </ul>
+            </div><!-- end navbar-collapse -->
+        </div><!-- end container-->
+
+
+
+
+    {% block content %}
+      
+    {%endblock content%}
+
+  
+
+
+
+
+
+<!-- Footer start here -->
+
+    <footer class="footer1">
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="footer-desc text-center">
+                        <img src="http://superdevresources.com/images/super-dev-resources-logo.png" width="82" height="48" alt="">
+                        <p>
+                            <a href="/" rel="home" title="Super Dev Resources">Super Dev Resources</a> is a popular blog for finding<br>awesome free app and web development resources. <a href="/about/">Learn More</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+
+                <nav class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                    <div class="input-group input-group-md">
+                      <input type="text" class="form-control" placeholder="Email Address">
+                      <span class="input-group-addon">Subscribe</span>
+                    </div>
+                </nav>
+            </div> <!--/.row--> 
+        </div> <!--/.container--> 
+    </div> <!--/.footer-->
+    
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="pull-left"> Copyright © <a href="">Nowsed Jahan</a>.  All right reserved.</div>
+            <div class="pull-right">
+                <ul>
+                    <li><a href="">Page 1</a></li>
+                    <li><a href="">Page 2</a></li>
+                    <li><a href="">Page 3</a></li>
+                    <li><a href="">Page 4</a></li>
+                </ul> 
+            </div>
+        </div>
+    </div> <!--/.footer-bottom--> 
+</footer>
+
+<!-- Footer end here -->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+   
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+
+  </body>
+</html>
